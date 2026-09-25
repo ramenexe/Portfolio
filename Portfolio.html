@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@400;500;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap');
+        body {
+            margin: 0;
+            background-image: url("paper.png");
+            background-repeat: repeat;
+            background-size: 600px;
+        }
+        .navbar {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(73, 50, 16, 0.187);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 10px;
+            border-bottom: 1px solid rgba(80, 60, 40, 0.2);
+            box-shadow: 0 8px 25px rgba(60, 45, 30, 0.18);
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #582F0E;
+        }
+        .navlinks a {
+            text-decoration: none;
+            color: #582F0E;
+            margin-left: 2dvh;
+            font-size: 18px;
+            font-family: "DM Serif Display", serif; 
+        }
+
+        .navlinks a:hover {
+            text-decoration: underline;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+
+            padding: 60px 10%;
+        }
+
+        .hero-image {
+            width: 350px;
+            height: 450px;
+            border:#582F0E 5px solid;
+            border-radius: 180px 180px 30px 30px;
+            overflow: hidden;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+            border-radius: 180px 180px 20px 20px;
+        }
+
+        .hero-text {
+            max-width: 550px;
+
+            padding: 50px;
+            background-color:rgba(249, 217, 157, 0.082);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 20px;
+            border: 2px solid #582F0E;
+            box-shadow: 0 8px 25px rgba(60, 45, 30, 0.15);
+
+        }
+
+        .hero-text h1 {
+            font-size: 60px;
+            margin: 0 0 10px;
+        }
+
+        .hero-text h2 {
+            font-size: 28px;
+            margin: 0 0 25px;
+        }
+
+        .hero-text p {
+            font-size: 18px;
+            line-height: 1.7;
+        }
+
+        h1, h2, h3 {
+            font-family: "DM Serif Display", serif;
+        }
+
+        p {
+            font-family: "Quicksand", sans-serif;
+        }
+
+        .divider {
+            color: #582F0E;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
+
+        .skill-list {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .skill-item {
+            background-color: rgba(255, 236, 187, 0.082);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 20px;
+            border: 2px solid #582F0E;
+            box-shadow: 0 8px 25px rgba(60, 45, 30, 0.15);
+            padding: 20px;
+            font-size: 18px;
+            font-family: "Quicksand", sans-serif;
+        }
+
+        
+        .section-title {
+            font-family: "Barlow Condensed", sans-serif;
+            font-size: 100px;
+            margin: 30px;
+            font-weight: 600;
+            color: #3B1F08;
+        }
+
+        .project-list {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+            padding: 20px;
+        }
+        .project-item {
+            background-color: rgba(183, 170, 137, 0.331);
+            border:#582F0E 2px solid;
+            border-radius: 20px;
+            padding: 20px;
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            font-size: 18px;
+            font-family: "Quicksand", sans-serif;
+            box-shadow: 0 8px 25px rgba(60, 45, 30, 0.15);
+        }
+        .project-links a:hover {
+            opacity: 0.6;
+        }
+        .project-links a {
+            color: #7F4F24;
+        }
+        h4 {
+            font-family: "DM Serif Display", serif;
+        }
+        .contact {
+            background-color: rgba(255, 236, 187, 0.082);
+            backdrop-filter: blur(25px);
+            -webkit-backdrop-filter: blur(25px);
+            border-radius: 20px;
+            border: 2px solid #582F0E;
+            box-shadow: 0 8px 25px rgba(60, 45, 30, 0.15);
+            padding: 10px;
+            font-size: 18px;
+            font-family: "Quicksand", sans-serif;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        .button {
+            background-color: #A68A64;
+            border: 1px solid #582F0E;
+            border-radius: 5px;
+            padding: 5px;
+            font-family: "DM Serif Display", serif;
+            width: 150px;
+        }
+
+        .education-container {
+            width: 75%;
+            max-width: 900px;
+            margin: 0 auto 100px;
+        }
+
+        .education-item {
+            display: grid;
+            grid-template-columns: 180px 1fr;
+            gap: 35px;
+
+            padding: 30px 0;
+
+            border-bottom: 1px solid rgba(59, 31, 8, 0.3);
+        }
+
+        .education-year {
+            font-family: "Caveat", cursive;
+            font-size: 25px;
+            color: #6F5A43;
+        }
+
+        .education-content h3 {
+            font-family: "DM Serif Display", serif;
+            font-size: 27px;
+            color: #3B1F08;
+            margin: 0 0 6px;
+
+        }
+
+        .education-content h4 {
+            font-family: "Quicksand", sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: #6F5A43;
+        }
+
+        .footer-name {
+            color: #582F0E;
+            margin: auto;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+
+        .footer-name2 {
+            color: #7F4F24;
+            font-size: 15px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--NAVBAR-->
+
+    <section>
+        <div class="navbar">
+        <div class="logo">Krittika ✿</div>
+        <div class="navlinks">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#education">Education</a>
+            <a href="#contact">Contact</a>
+        </div>
+        </div>
+    </section>
+
+    <!--HERO-->
+
+    <section id="about" class="section">
+        <h1 class="section-title">Portfolio</h1>
+        <div class="hero">
+            <div class="hero-image">
+                <img src="file_00000000a38c71fdadb1b4d934bac1f8.png" alt="pfp">
+            </div>
+            <div class="hero-text">
+                <h1>Hi, I'm Krittika</h1>
+                <h2><i>Frontend Developer</i></h2>
+                <p>I'm a Computer Science student interested
+                    in frontend development and building
+                    interactive web experiences.
+
+                    I enjoy learning by building projects
+                    and experimenting with new ideas.
+                </p>
+            </div>
+        </div>
+    </section>
+    <div class="divider">
+    <span>· · ───•⋅⊰ ✿ ⊱⋅•─── · ·</span>
+    </div>
+
+    <!--SKILLS-->
+
+    <section id="skills" class="section">
+        <h1 class="section-title">Skills</h1>
+        <div class="skill-list">
+            <div class="skill-item">HTML</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">Java</div>
+            <div class="skill-item">Python</div>
+        </div>
+    </section>
+    <div class="divider">
+    <span>· · ───•⋅⊰ ✿ ⊱⋅•─── · ·</span>
+    </div>
+
+    <!--PROJECTS-->
+
+    <section id="projects" class="section">
+        <h1 class="section-title">Projects</h1>
+        <div class="project-list">
+            <div class="project-item"><h4>⸙Project 1⸙</h4>
+                <p>A basic student profile consisting of personal information and academic details.</p>
+                <div class="project-links">
+                    <a href="#livedemo">Live Demo↗</a>
+                    <a href="#github">GitHub↗</a>
+                </div>
+            </div>
+            <div class="project-item"><h4>⸙Project 2⸙</h4>
+                <p>An informative website about Egyptian Hieroglyphs.</p>
+                <div class="project-links">
+                    <a href="#livedemo">Live Demo↗</a>
+                    <a href="#github">GitHub↗</a>
+                </div>
+            </div>
+            <div class="project-item"><h4>⸙Project 3⸙</h4>
+                <p>A replica of a cart page of e-commerce sites like Amazon and Flipkart.</p>
+                <div class="project-links">
+                    <a href="#livedemo">Live Demo↗</a>
+                    <a href="#github">GitHub↗</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="divider">
+    <span>· · ───•⋅⊰ ✿ ⊱⋅•─── · ·</span>
+    </div>
+
+    <!--EDUCATION-->
+
+    <section id="education" class="education">
+        <h1 class="section-title">Education</h1>
+    <div class="education-container">
+
+        <div class="education-item">
+            <div class="education-year">
+                2024 — Present
+            </div>
+
+            <div class="education-content">
+                <h3>Bachelor's Degree in Computer Science</h3>
+                <h4>IIT Madras</h4>
+
+                <p>
+                    Currently exploring web development, programming,
+                    design, and other areas of technology.
+                </p>
+            </div>
+        </div>
+    
+
+
+        <div class="education-item">
+            <div class="education-year">
+                2022 — 2024
+            </div>
+
+            <div class="education-content">
+                <h3>Higher Secondary Education</h3>
+                <h4>Innovative International School</h4>
+                <p>
+                    Studied subjects including Mathematics,
+                    Computer Science, and other core subjects.
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+    </section>
+    <div class="divider">
+    <span>· · ───•⋅⊰ ✿ ⊱⋅•─── · ·</span>
+    </div>
+
+    <!--CONTACT-->
+
+    <section id="contact" class="section">
+        <h1 class="section-title">Get in touch</h1>
+        <div class="contact">
+            <div class="contact-text">
+                <h4>Feel free to reach out to me via email or connect with me on LinkedIn.</h4>
+                <p>Email: krittikakh09@gmail.com</p>
+                <p>GitHub: github.com/ramen.exe</p>
+                <p>Instagram: @krittika.serein</p>
+            </div>
+            <button class="button"><h3>Send Message</h3></button>
+        </div>
+    </section>
+    <div class="divider">
+    <span>· · ───•⋅⊰ ✿ ⊱⋅•─── · ·</span>
+    </div>
+
+    <!--FOOTER-->
+    <footer class="footer">
+        <p class="footer-name">© 2026 Krittika</p>
+        <p class="footer-name2">Made with ♡ and a little bit of code.</p>
+    </footer>
+</body>

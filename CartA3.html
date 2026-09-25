@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassWork</title>
+    <style>
+
+        #search {
+            width: 1000px;
+            height: 30px;
+            border-radius: 10px;
+            padding: 5px;
+            border: 2px solid rgb(113, 188, 213);
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            width: 200px;
+            height: 100px;
+            border-radius: 10px;
+        }
+        .rate {
+            background-color: green;
+            font-weight: bold;
+            padding: 3px;
+            border-radius: 5px;
+        }
+        .desc {
+            font-size: 14px;
+            color: #747474;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: auto;
+            background-color: #faf9f5;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 5px;
+        }
+        .item {
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .img img {
+            width: 200px;
+            height: 250px;
+            object-fit: contain;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="logo">
+        <img src="https://thumb.wikimedia.org/wikipedia/commons/thumb/e/e5/Flipkart_logo_%282026%29.svg/3840px-Flipkart_logo_%282026%29.svg.png?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=thumbnail" alt="logo">
+    </div>
+    <div>
+        <form>
+            <label for="search">
+                <input type="text" id="search" placeholder="Search for Products, Brands and More">
+            </label>
+        </form>
+    </div>
+    <div class="container">
+
+        <div class="item item1">
+            <div class="img imgA">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS63APsgL0bfNby_gJvWpAoglCCWx5rO1upSGOaGoEypA&s" alt="Phone">
+            </div>
+            <div class="title titleA"><h3><strong>Apple</strong><span class="desc"> iPhone 17 (256GB)</span></h3></div>
+            <div class="price priceA"><h3>$999</h3></div>
+            <div class="rating ratingA">
+                <span class="rate">4.6★</span>
+                <span>(26,971)</span>
+            </div>
+        </div>
+
+        <div class="item item2">
+            <div class="img imgB">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5_r3p8gpwvRMUYbLDwBxvndM_6uhM13XPKBhoGKuQbg&s=10" alt="Bangles">
+            </div>
+            <div class="title titleB"><h3><strong>BlueStone</strong><span class="desc"> Gold Bangles</span></h3></div>
+            <div class="price priceB"><h3>$199</h3></div>
+            <div class="rating ratingB">
+                <span class="rate">4.3★</span>
+                <span>(12,345)</span>
+            </div>
+        </div>
+
+        <div class="item item3">
+            <div class="img imgC">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdeW5mgTtDD17N-OOI7fc1r7Ilu8HLtjBjUtgwUCZkvA&s=10" alt="Basket">
+            </div>
+            <div class="title titleC"><h3><strong>Handicraft</strong><span class="desc"> Wicker Basket</span></h3></div>
+            <div class="price priceC"><h3>$49</h3></div>
+            <div class="rating ratingC">
+                <span class="rate">4.1★</span>
+                <span>(8,765)</span>
+            </div>
+        </div>
+
+        <div class="item item4">
+            <div class="img imgD">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6kAVJv_Yd0oKe0LiCCQ9o_JEfXpuPJSw3HR3aXzLezwP2hVz-dxYyiZ8&s=10" alt="T-Shirt">
+            </div>
+            <div class="title titleD"><h3><strong>Adidas</strong><span class="desc"> Real Madrid Emerald Green Jersey</span></h3></div>
+            <div class="price priceD"><h3>$115</h3></div>
+            <div class="rating ratingD">
+                <span class="rate">4.0★</span>
+                <span>(5,432)</span>
+            </div>
+        </div>
+    </div>
+</body>
